@@ -31,7 +31,7 @@ public class DataTypes {
     // Youtube Like vs Dislike Ratio
     public static float ratio(int likes, int dislikes) {
         if(dislikes==0){
-            return 0;
+            return 1;
         }
         return (float)likes/(likes+dislikes) * 100;
     }
