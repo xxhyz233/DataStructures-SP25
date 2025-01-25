@@ -33,18 +33,15 @@ public class Inheritance {
     }
 
     // Main class to test the inheritance
-    public class Main {
-        public static void main(String[] args) {
+    public static void main(String[] args) {
             // Create an instance of Dog
-            Dog myDog = new Dog("Buddy");
+        Dog myDog = new Dog("Buddy");
 
             // Call methods from Animal class
-            myDog.eat();
-            myDog.sleep();
+        myDog.eat();
+        myDog.sleep();
 
             // Call method from Dog class
-            myDog.bark();
-        }
+        myDog.bark();
     }
-
 }
