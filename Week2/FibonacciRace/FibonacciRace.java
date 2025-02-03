@@ -16,16 +16,17 @@ public class FibonacciRace {
     if (args.length < 2) {
       throw new IllegalArgumentException("Two arguments are required: <index> and <maxTime>.");
     }
-    // Exceptions for negative integers 
-    if(index < 0 || maxTime < 0) {
-      throw new IllegalArgumentException("Argument cannot be negative.");
-    }
+
     // Exceptions for non-integers, checks for NumberFormat exception then run the custom exception beforehand
     try {
       maxInput = Integer.parseInt(args[0]);
       maxTime = Integer.parseInt(args[1]);
     } catch (NumberFormatException e) {
       throw new IllegalArgumentException("Arguments must be integers.", e);
+    }
+    // Exceptions for negative integers 
+    if(maxInput < 0 || maxTime < 0) {
+      throw new IllegalArgumentException("Argument cannot be negative.");
     }
     
     // Recursive
@@ -36,9 +37,7 @@ public class FibonacciRace {
     if(timeToRun > maxTime) {
       System.out.println("RECURSE Algorithm exceeds maximum run time!");
     }
-    else {
-      System.out.println(ANSI_RED + "RECURSE\n" + ANSI_RESET + "Index: " + maxInput + "\tResult: " + recursiveResult + "\tTime: " + timeToRun + "ms");
-    }
+    System.out.println(ANSI_RED + "RECURSE\n" + ANSI_RESET + "Index: " + maxInput + "\tResult: " + recursiveResult + "\tTime: " + timeToRun + "ms");
     
     // Dynamic Programming
     startTime = System.currentTimeMillis();
@@ -48,9 +47,7 @@ public class FibonacciRace {
     if(timeToRun > maxTime) {
       System.out.println("DYNAMIC Algorithm exceeds maximum run time!");
     }
-    else {
-      System.out.println(ANSI_BLUE + "DYNAMIC\n" + ANSI_RESET + "Index: " + maxInput + " \tResult: " + dynamicResult + "\tTime: " + timeToRun + "ms");
-    }
+    System.out.println(ANSI_BLUE + "DYNAMIC\n" + ANSI_RESET + "Index: " + maxInput + " \tResult: " + dynamicResult + "\tTime: " + timeToRun + "ms");
     
     // Closed Formula
     startTime = System.currentTimeMillis();
@@ -60,9 +57,7 @@ public class FibonacciRace {
     if(timeToRun > maxTime) {
       System.out.println("FORMULA Algorithm exceeds maximum run time!");
     }
-    else {
-      System.out.println(ANSI_PURPLE + "FORMULA\n" + ANSI_RESET + "Index: " + maxInput + " \tResult: " + formulaResult + "\tTime: " + timeToRun + "ms");;
-    }
+    System.out.println(ANSI_PURPLE + "FORMULA\n" + ANSI_RESET + "Index: " + maxInput + " \tResult: " + formulaResult + "\tTime: " + timeToRun + "ms");;
   }
 
   // RECURSIVE
