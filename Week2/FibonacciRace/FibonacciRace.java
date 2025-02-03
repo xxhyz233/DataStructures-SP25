@@ -46,7 +46,7 @@ public class FibonacciRace {
     endTime = System.currentTimeMillis();
     timeToRun = endTime - startTime;
     if(timeToRun > maxTime) {
-      System.out.println("RECURSE Algorithm exceeds maximum run time!");
+      System.out.println("DYNAMIC Algorithm exceeds maximum run time!");
     }
     else {
       System.out.println(ANSI_BLUE + "DYNAMIC\n" + ANSI_RESET + "Index: " + maxInput + " \tResult: " + dynamicResult + "\tTime: " + timeToRun + "ms");
@@ -58,7 +58,7 @@ public class FibonacciRace {
     endTime = System.currentTimeMillis();
     timeToRun = endTime - startTime;
     if(timeToRun > maxTime) {
-      System.out.println("RECURSE Algorithm exceeds maximum run time!");
+      System.out.println("FORMULA Algorithm exceeds maximum run time!");
     }
     else {
       System.out.println(ANSI_PURPLE + "FORMULA\n" + ANSI_RESET + "Index: " + maxInput + " \tResult: " + formulaResult + "\tTime: " + timeToRun + "ms");;
